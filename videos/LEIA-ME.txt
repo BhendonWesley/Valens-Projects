@@ -1,0 +1,14 @@
+COLOQUE OS VIDEOS DA VALENS AQUI (baixados dos destaques do Instagram).
+Use exatamente estes nomes de arquivo (tudo minusculo, .mp4):
+
+  framing.mp4        -> destaque "Framing"
+  roofing.mp4        -> destaque "Roofing"
+  siding.mp4         -> destaque "Siding"
+  decks.mp4          -> destaque "Deck"
+  additions.mp4      -> destaque "Addition"
+  backyard.mp4       -> destaque "backyard"
+  fine-finishes.mp4  -> destaques "Stairs" + "Trim" + "Kitchen" + "Bathroom"
+  snow.mp4           -> destaque "Snow services"
+
+Formato: MP4 (H.264). Vertical (9:16) funciona perfeito, igual ao Instagram.
+Enquanto o video nao estiver aqui, aparece a foto de poster automaticamente.

@@ -1,0 +1,10 @@
+# Local machine-specific Claude Code settings
+.claude/settings.local.json
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependencies (if added later)
+node_modules/
