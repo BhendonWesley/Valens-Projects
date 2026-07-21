@@ -857,9 +857,9 @@
   <nav id="navbar" class="fixed top-0 inset-x-0 z-50 border-b border-transparent">
     <div class="max-w-site mx-auto px-6 lg:px-16 flex items-center justify-between h-16 lg:h-20">
 
-      <a href="#home" class="flex items-center gap-3">
+      <a href="#home" class="flex items-center gap-3 flex-shrink-0">
         <span id="nav-logo-chip"
-          class="inline-flex items-center justify-center bg-white rounded-xl px-3 py-1.5"
+          class="inline-flex items-center justify-center bg-white rounded-xl px-3 py-1.5 flex-shrink-0"
           style="box-shadow:0 4px 16px rgba(0,0,0,.28);">
           <img src="./valens-logo.png" id="nav-logo" width="1008" height="816"
             alt="Valens Projects — The Best or Nothing" />
@@ -868,9 +868,9 @@
 
       <!-- Label mobile — entre logo e hamburger -->
       <div
-        class="md:hidden flex items-center gap-1.5 bg-white/5 border border-primary/20 backdrop-blur-sm px-3 py-1.5 rounded-full">
+        class="md:hidden flex items-center gap-1.5 bg-white/5 border border-primary/20 backdrop-blur-sm px-3 py-1.5 rounded-full min-w-0 overflow-hidden">
         <span class="w-1 h-1 rounded-full bg-primary animate-pulse flex-shrink-0"></span>
-        <span class="font-body text-[8.5px] text-primary uppercase tracking-[.08em] whitespace-nowrap">Licensed &amp;
+        <span class="font-body text-[8.5px] text-primary uppercase tracking-[.08em] whitespace-nowrap overflow-hidden text-ellipsis">Licensed &amp;
           Insured · The Best or Nothing</span>
       </div>
 
