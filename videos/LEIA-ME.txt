@@ -5,10 +5,10 @@ Use exatamente estes nomes de arquivo (tudo minusculo, .mp4):
   roofing.mp4        -> destaque "Roofing"
   siding.mp4         -> destaque "Siding"
   decks.mp4          -> destaque "Deck"
-  additions.mp4      -> destaque "Addition"
   backyard.mp4       -> destaque "backyard"
   fine-finishes.mp4  -> destaques "Stairs" + "Trim" + "Kitchen" + "Bathroom"
   snow.mp4           -> destaque "Snow services"
 
-Formato: MP4 (H.264). Vertical (9:16) funciona perfeito, igual ao Instagram.
+Formato: MP4 (H.264). Vertical 9:16 (1080x1920) e o ideal - encaixa perfeito.
 Enquanto o video nao estiver aqui, aparece a foto de poster automaticamente.
+Obs: Additions nao tem slide de video (fica listado no rodape e no formulario).
