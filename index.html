@@ -425,6 +425,22 @@
       }
     }
 
+    /* Visible for 5s, hidden for 6s, repeat */
+    @keyframes whatsapp-message-cycle {
+      0%, 45% {
+        opacity: 1;
+        transform: none;
+      }
+      50%, 95% {
+        opacity: 0;
+        transform: translateX(8px) scale(.97);
+      }
+      100% {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
     .whatsapp-float {
       position: fixed;
       right: clamp(18px, 2.5vw, 36px);
@@ -448,7 +464,8 @@
       line-height: 1.3;
       white-space: nowrap;
       box-shadow: 0 10px 30px rgba(3, 18, 45, .16);
-      animation: whatsapp-message-in .55s cubic-bezier(.16, 1, .3, 1) .8s both;
+      animation: whatsapp-message-in .55s cubic-bezier(.16, 1, .3, 1) .8s both,
+        whatsapp-message-cycle 11s ease-in-out 1.35s infinite;
       transition: transform .3s ease, border-color .3s ease;
     }
 
@@ -485,6 +502,8 @@
     }
 
     .whatsapp-float:hover .whatsapp-message {
+      animation-play-state: paused;
+      opacity: 1;
       transform: translateX(-3px);
       border-color: rgba(1, 147, 225, .4);
     }
@@ -1703,9 +1722,17 @@
     });
 
     document.querySelectorAll('a, button, .flip-card, .val, .more-card, .map-state').forEach(el => {
+      if (el.closest('.whatsapp-float')) return;
       el.addEventListener('mouseenter', () => { cur.style.width = '20px'; cur.style.height = '20px'; cur.style.background = 'rgba(1,147,225,.6)'; });
       el.addEventListener('mouseleave', () => { cur.style.width = '10px'; cur.style.height = '10px'; cur.style.background = '#0193E1'; });
     });
+
+    // WhatsApp button has its own hover animation — hide the custom cursor over it instead of growing it
+    const waFloat = document.querySelector('.whatsapp-float');
+    if (waFloat) {
+      waFloat.addEventListener('mouseenter', () => { cur.style.opacity = '0'; ring.style.opacity = '0'; });
+      waFloat.addEventListener('mouseleave', () => { cur.style.opacity = '1'; ring.style.opacity = '1'; });
+    }
 
     // ── Service-area map caption ──
     const mapCap = document.getElementById('map-cap');
