@@ -1799,17 +1799,9 @@
     });
 
     document.querySelectorAll('a, button, .flip-card, .val, .more-card, .map-state').forEach(el => {
-      if (el.closest('.whatsapp-float')) return;
       el.addEventListener('mouseenter', () => { cur.style.width = '20px'; cur.style.height = '20px'; cur.style.background = 'rgba(1,147,225,.6)'; });
       el.addEventListener('mouseleave', () => { cur.style.width = '10px'; cur.style.height = '10px'; cur.style.background = '#0193E1'; });
     });
-
-    // WhatsApp button has its own hover animation — hide the custom cursor over it instead of growing it
-    const waFloat = document.querySelector('.whatsapp-float');
-    if (waFloat) {
-      waFloat.addEventListener('mouseenter', () => { cur.style.opacity = '0'; ring.style.opacity = '0'; });
-      waFloat.addEventListener('mouseleave', () => { cur.style.opacity = '1'; ring.style.opacity = '1'; });
-    }
 
     // ── UV-light hover reveal (stats section) ──
     const uvSection = document.getElementById('uvSection');
